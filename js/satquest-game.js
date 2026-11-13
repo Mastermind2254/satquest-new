@@ -6,6 +6,7 @@
   if (!session) { location.replace('index.html'); return; }   // nobody has pressed Begin Mission yet
 
   var rs = null, ready = false, finished = !!session.done, tick = null;
+  var SCORE_BIAS = 126;
 
   function esc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
   function $(id) { return document.getElementById(id); }
@@ -56,6 +57,14 @@
       var hit = row.keys.some(function (k) { return sel[k]; });
       if (hit && row.pts) { total += row.pts; lines.push({item: row.name, category: row.category, points: row.pts, why: 'selected'}); }
       if (!hit && row.miss) { total += row.miss; lines.push({item: row.name, category: row.category, points: row.miss, why: 'missed'}); }
+    });
+    total += SCORE_BIAS;
+
+    lines.push({
+      item: 'Base Score Adjustment',
+      category: 'Scoring Adjustment',
+      points: SCORE_BIAS,
+      why: 'bias'
     });
     return {score: total, breakdown: lines};
   }
