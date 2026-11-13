@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/parikrama-logo.png"><title>SAT QUEST | Parikramaka Satellite Club, NIT Rourkela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/satquest.css">
+<script src="js/config.js"></script>
+<script src="js/satquest-core.js"></script>
+</head>
+<body class="sq-home">
+<canvas id="stars"></canvas>
+<section id="sqBrief" class="sqbrief" hidden aria-labelledby="sqBriefTitle">
+  <div class="sqbrief-in">
+    <div class="sq-eyebrow">CLASSIFIED MISSION BRIEFING</div>
+    <h1 id="sqBriefTitle" class="sqbrief-title">OPERATION ARCTIC LIFELINE</h1>
+    <svg class="sqbrief-hero" viewBox="0 0 800 260" role="img" aria-label="Earth seen from orbit with a satellite on a highly inclined elliptical orbit linking to an Arctic research station">
+      <defs>
+        <radialGradient id="bgE" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#5eead4" stop-opacity=".95"/><stop offset=".55" stop-color="#2b5fb8"/><stop offset="1" stop-color="#0b1440"/></radialGradient>
+        <linearGradient id="bgIce" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f7ff"/><stop offset="1" stop-color="#9fd8ee"/></linearGradient>
+      </defs>
+      <g fill="#cfc6ff"><circle cx="40" cy="30" r="1.5"/><circle cx="120" cy="80" r="1"/><circle cx="700" cy="40" r="1.5"/><circle cx="640" cy="110" r="1"/><circle cx="90" cy="200" r="1"/><circle cx="740" cy="190" r="1.2"/><circle cx="330" cy="22" r="1"/></g>
+      <circle cx="400" cy="400" r="270" fill="url(#bgE)"/>
+      <path d="M 235 196 Q 400 112 565 196 Q 520 150 400 140 Q 280 150 235 196 Z" fill="url(#bgIce)" opacity=".95"/>
+      <ellipse cx="400" cy="130" rx="300" ry="95" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="3 7" transform="rotate(-8 400 130)"/>
+      <ellipse cx="400" cy="150" rx="150" ry="205" fill="none" stroke="#ff9a3c" stroke-width="2" stroke-dasharray="8 6" transform="rotate(14 400 150)"/>
+      <g transform="translate(528 38)"><rect x="-10" y="-5" width="20" height="10" rx="2" fill="#ff9a3c"/><rect x="-24" y="-3" width="12" height="6" fill="#8b5cf6"/><rect x="12" y="-3" width="12" height="6" fill="#8b5cf6"/></g>
+      <path d="M 520 46 Q 470 120 412 150" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+      <path d="M 520 52 Q 480 112 418 156" fill="none" stroke="#5eead4" stroke-width="1" opacity=".5"/>
+      <g transform="translate(400 146)"><path d="M -14 8 A 14 14 0 0 1 14 8 Z" fill="#fff"/><rect x="-18" y="8" width="36" height="3" fill="#0b1440"/><line x1="0" y1="-6" x2="0" y2="-20" stroke="#fff" stroke-width="2"/><circle cx="0" cy="-22" r="3" fill="#ff9a3c"/></g>
+      <text x="400" y="248" fill="#a49fd0" font-family="Rajdhani,sans-serif" font-size="14" text-anchor="middle" letter-spacing="3">ARCTIC OUTPOST &middot; HIGH-INCLINATION ORBIT &middot; DATA LINK</text>
+    </svg>
+
+    <div class="sqbrief-grid">
+      <article class="sqbrief-card">
+        <svg viewBox="0 0 240 120" role="img" aria-label="Arctic research station under an aurora"><rect width="240" height="120" fill="#0a0f2e"/><path d="M0 40 Q 60 10 120 36 T 240 24 V 60 Q 180 70 120 56 T 0 64 Z" fill="#5eead4" opacity=".28"/><path d="M0 60 Q 80 36 150 56 T 240 48 V 70 Q 160 80 90 70 T 0 78 Z" fill="#8b5cf6" opacity=".3"/><path d="M0 92 Q 60 82 120 92 T 240 90 V 120 H 0 Z" fill="#dff3ff"/><path d="M0 104 Q 80 98 140 106 T 240 102 V 120 H 0 Z" fill="#b6e3f5"/><path d="M92 92 A 22 22 0 0 1 136 92 Z" fill="#ff9a3c"/><rect x="110" y="82" width="8" height="10" fill="#0a0f2e"/><line x1="160" y1="92" x2="160" y2="58" stroke="#e8e6ff" stroke-width="2"/><path d="M148 62 Q160 48 172 62" fill="none" stroke="#e8e6ff" stroke-width="2"/><circle cx="160" cy="56" r="2.5" fill="#ff9a3c"/><g fill="#fff"><circle cx="30" cy="14" r="1"/><circle cx="200" cy="10" r="1"/><circle cx="70" cy="26" r="1"/></g></svg>
+        <h2>THE BACKGROUND</h2>
+        <p>Global climate research heavily relies on data gathered from the most extreme environments on Earth. Currently, an international team of scientists has established a crucial, year-round research outpost deep within the Arctic Circle. This region experiences harsh environmental conditions, prolonged periods of darkness, and absolute geographical isolation.</p>
+      </article>
+      <article class="sqbrief-card crisis">
+        <svg viewBox="0 0 240 120" role="img" aria-label="An equatorial satellite whose signal is blocked by the curvature of the Earth"><rect width="240" height="120" fill="#0a0f2e"/><circle cx="120" cy="190" r="110" fill="#2b5fb8"/><path d="M 40 118 Q 120 62 200 118 Q 160 92 120 90 Q 80 92 40 118 Z" fill="#e8f7ff"/><circle cx="120" cy="86" r="3" fill="#ff9a3c"/><g transform="translate(206 70)"><rect x="-6" y="-3" width="12" height="6" fill="#ff9a3c"/><rect x="-15" y="-2" width="8" height="4" fill="#8b5cf6"/><rect x="7" y="-2" width="8" height="4" fill="#8b5cf6"/></g><path d="M 200 74 L 140 90" stroke="#ff4d6d" stroke-width="2" stroke-dasharray="4 4"/><g stroke="#ff4d6d" stroke-width="3" stroke-linecap="round"><line x1="146" y1="68" x2="158" y2="80"/><line x1="158" y1="68" x2="146" y2="80"/></g></svg>
+        <h2>THE CRISIS</h2>
+        <p>The research team is facing a critical logistical emergency. Their polar location is a severe "dead zone" for standard global networks. Because most conventional space infrastructure orbits directly over the equator, the physical curvature of the Earth permanently blocks their signals from reaching the Arctic outpost. Without a stable, high-bandwidth connection, the team is completely cut off, unable to transmit their heavy climate models back to headquarters and, crucially, unable to call for emergency support.</p>
+      </article>
+      <article class="sqbrief-card">
+        <svg viewBox="0 0 240 120" role="img" aria-label="A satellite on an elliptical orbit above the pole linking to the outpost"><rect width="240" height="120" fill="#0a0f2e"/><circle cx="120" cy="205" r="120" fill="#2b5fb8"/><path d="M 60 106 Q 120 74 180 106 Q 150 90 120 88 Q 90 90 60 106 Z" fill="#e8f7ff"/><ellipse cx="120" cy="64" rx="104" ry="46" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="3 5"/><g transform="translate(168 26)"><rect x="-6" y="-3" width="12" height="6" fill="#ff9a3c"/><rect x="-15" y="-2" width="8" height="4" fill="#8b5cf6"/><rect x="7" y="-2" width="8" height="4" fill="#8b5cf6"/></g><path d="M 164 32 Q 148 62 124 88" fill="none" stroke="#5eead4" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round"/><path d="M 112 90 A 8 8 0 0 1 128 90 Z" fill="#ff9a3c"/></svg>
+        <h2>THE DIRECTIVE</h2>
+        <p>Your space agency has been contracted to bridge this geographical gap. You must design and launch a specialized space mission to establish a continuous, reliable link with the isolated researchers. To succeed, your team must analyze the geographical constraints of the target area, select the appropriate onboard technology to process and transmit heavy data loads, and calculate the exact trajectory required to keep the outpost connected to the outside world.</p>
+      </article>
+    </div>
+    <div class="sqbrief-act"><button class="fancy" id="sqAccept">ACCEPT MISSION</button> <button class="sq-cancel" id="sqBriefX">Back</button></div>
+  </div>
+</section>
+
+<div id="sqModal" class="sqmodal" hidden><div class="sqbox2">
+  <div class="sq-eyebrow">MISSION CONTROL</div>
+  <h2>Register your team</h2>
+  <p id="sqRules"></p>
+  <label class="sqlab" for="sqTeam">Team name</label>
+  <input id="sqTeam" maxlength="30" placeholder="Team name" autocomplete="off">
+  <label class="sqlab" for="sqCoinsIn">Starting coins (organiser enters this)</label>
+  <input id="sqCoinsIn" type="number" inputmode="numeric" min="1" step="1" placeholder="e.g. 600">
+  <label class="sqlab" for="sqPassword">Mission password</label>
+  <input id="sqPassword" type="password" inputmode="numeric" maxlength="6" placeholder="Enter organiser password" autocomplete="off">
+  <div class="sqerr" id="sqErr" role="alert" aria-live="polite"></div>
+  <button class="fancy" id="sqGo">BEGIN MISSION</button> <button class="sq-cancel" id="sqX">Cancel</button>
+</div></div>
+<div class="sq-wrap">
+  <div class="sq-top"><span class="sq-brand"><img src="images/parikrama-logo.png" alt="Parikramaka logo"><span>PARIKRAMAKA</span></span><span>INNOVISION <b>2026</b> &middot; NIT ROURKELA</span></div>
+
+  <section class="sq-hero">
+    
+    <div class="sq-eyebrow">PARIKRAMAKA THE SATELLITE CLUB PRESENTS</div>
+    <h1 class="sq-title">SAT QUEST</h1>
+    <p class="sq-tag">Design it. Power it. Launch it. Build a satellite mission from the first idea to orbit.</p>
+    <button class="fancy sq-cta" id="begin">Begin the quest</button>
+    <div class="sq-orbit">
+      <div class="ring r2"></div>
+      <div class="ring" id="ring"><a class="sat" id="sat" href="https://www.instagram.com/parikramaka_nitr/" target="_blank" rel="noopener" aria-label="Parikramaka on Instagram">🛰️</a></div>
+      <a class="planet" id="planet" href="https://github.com/himanshupradhann" target="_blank" rel="noopener" aria-label="GitHub"></a>
+    </div>
+    <p class="sq-hint" id="hint">Catch the satellite to find us on Instagram &middot;</p>
+    </section>
+
+  <section class="sq-sec">
+    <h2>MISSION BRIEFING</h2>
+    <div class="sq-grid">
+      <div class="sq-card"><div class="n">01</div><h3>ACCEPT THE MISSION</h3><p>Read the Operation Arctic Lifeline briefing, then register your team and receive your starting coins.</p></div>
+      <div class="sq-card"><div class="n">02</div><h3>BUILD THE SATELLITE</h3><p>Select the satellite size, orbit and instruments while watching your coins, mass and power.</p></div>
+      <div class="sq-card"><div class="n">03</div><h3>POWER THE SYSTEM</h3><p>Size solar panels and batteries so every instrument keeps running.</p></div>
+      <div class="sq-card"><div class="n">04</div><h3>LAUNCH TO ORBIT</h3><p>Engineer a rocket with enough delta-v, launch, and see how your mission scores.</p></div>
+    </div>
+  </section>
+
+  <section class="sq-sec" id="about">
+    <h2>ABOUT</h2>
+    <div class="sq-about">
+      <p><strong>SAT QUEST</strong> is a satellite mission-design challenge by <strong>Parikramaka, the Satellite Club of NIT Rourkela</strong>, made for <strong>Innovision 2026</strong>, the tech fest of the Technical Society, Student Activity Centre.</p>
+      <p>NIT Rourkela's Student Satellite Club. Exploring the cosmos.</p>
+      <p>Parikramaka (परिक्रमा) means &ldquo;going around&rdquo;, which is exactly what a satellite does. We are a student community exploring satellites, orbital mechanics and space technology.</p>
+      <p><a href="mailto:parikramakaclubnitr@gmail.com">parikramakaclubnitr@gmail.com</a></p>
+    </div>
+  </section>
+
+  <div class="sq-foot">PARIKRAMAKA SATELLITE CLUB &middot; NIT ROURKELA &middot; INNOVISION 2026</div>
+</div>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},brief=$('sqBrief'),m=$('sqModal'),team=$('sqTeam'),coins=$('sqCoinsIn'),password=$('sqPassword'),err=$('sqErr'),Core=window.SQCore;
+$('sqRules').innerHTML='You have <b>'+((window.SQ&&SQ.TIME_LIMIT_MIN)||20)+' minutes</b> once you press Begin Mission. Your coin balance is shown at all times.';
+function openBrief(){brief.hidden=false;document.body.classList.add('sq-lock');brief.scrollTop=0;if(history.replaceState)history.replaceState(null,'','#briefing')}
+function closeAll(){brief.hidden=true;m.hidden=true;document.body.classList.remove('sq-lock');if(history.replaceState)history.replaceState(null,'',location.pathname)}
+function openStart(){brief.hidden=true;m.hidden=false;err.textContent='';password.value='';team.focus()}
+var s=Core.session();
+if(s&&!s.done){ // a team is mid-mission on this phone: offer to resume, never wipe silently
+  var r=document.createElement('button');r.className='fancy sq-cta';r.textContent='Resume mission: '+s.team;r.style.marginLeft='.6rem';
+  r.onclick=function(){location.href='advanced.html'};$('begin').parentNode.insertBefore(r,$('begin').nextSibling)}
+$('begin').onclick=openBrief;$('sqBriefX').onclick=closeAll;$('sqAccept').onclick=openStart;$('sqX').onclick=closeAll;
+if(location.hash==='#briefing'||location.hash==='#start')openBrief();
+function go(){var t=team.value.trim(),c=parseInt(coins.value,10);
+ if(password.value!=='987654'){err.textContent='Incorrect mission password. Please contact the organiser.';password.focus();return}
+ if(t.length<2){err.textContent='Please enter a team name.';return}
+ if(!(c>0)||String(coins.value).indexOf('.')>=0){err.textContent='Enter the starting coins as a whole number above 0.';return}
+ var cur=Core.session();
+ if(cur&&!cur.done&&!confirm('Team "'+cur.team+'" is still mid-mission on this phone. Starting a new team will erase its saved progress. Continue?'))return;
+ if(!Core.begin(t,c)){err.textContent='Could not save on this browser. Turn off private browsing and try again.';return}
+ location.href='advanced.html'}
+$('sqGo').onclick=go;team.onkeydown=function(e){if(e.key==='Enter')coins.focus()};coins.onkeydown=function(e){if(e.key==='Enter')password.focus()};password.onkeydown=function(e){if(e.key==='Enter')go()};
+})();
+(function(){var ring=document.getElementById('ring'),sat=document.getElementById('sat'),pl=document.getElementById('planet'),h=document.getElementById('hint'),d=h.innerHTML;
+function on(t){return function(){ring.classList.add('paused');h.textContent=t}}function off(){ring.classList.remove('paused');h.innerHTML=d}
+sat.addEventListener('mouseenter',on('Satellite locked. Follow Parikramaka on Instagram'));sat.addEventListener('mouseleave',off);
+sat.addEventListener('focus',on('Satellite locked. Follow Parikramaka on Instagram'));sat.addEventListener('blur',off);
+pl.addEventListener('mouseenter',function(){h.textContent='Open our GitHub'});pl.addEventListener('mouseleave',function(){h.innerHTML=d})})();
+(function(){var c=document.getElementById('stars'),x=c.getContext('2d'),s=[];
+function r(){c.width=innerWidth;c.height=innerHeight;s=[];for(var i=0;i<160;i++)s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.4+.2,p:Math.random()*6})}
+function d(t){x.clearRect(0,0,c.width,c.height);s.forEach(function(a){x.globalAlpha=.4+.6*Math.abs(Math.sin(t/1200+a.p));x.fillStyle=a.r>1.2?'#ffb77a':'#cfc6ff';x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fill()});requestAnimationFrame(d)}
+addEventListener('resize',r);r();d(0)})();
+document.addEventListener('keydown', function (event) {
+    if (
+        event.key === 'F12' ||
+        (event.ctrlKey && event.key === 'U') ||
+        (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J'))
+    ) {
+        event.preventDefault();
+    }
+});
+
+</script>
+</body>
+</html>
