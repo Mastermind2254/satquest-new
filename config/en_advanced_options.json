@@ -953,8 +953,8 @@
 			"missions": [{
 				"title": "Satellite telephone system",
 				"description": "Lets people talk over the phone from remote regions of the world using satellites.",
-				"launch": "Welcome to the launch of the UK Space Agency's latest communication satellite that will allow people from regions all over the world to communicate by telephone.",
-				"success": "Congratulations, your communication satellite is now receiving signals from the ground and broadcasting them to phones around the Earth on behalf of the UK Space Agency.",
+				"launch": "Welcome to the launch of your team's latest communication satellite, designed to connect isolated Arctic researchers and transmit vital climate data.",
+				"success": "Congratulations! Your satellite is now helping isolated Arctic researchers communicate and transmit climate data across the region.",
 				"image": {
 					"file": "images/svg/mobile-alt-white.svg",
 					"alt": "Satellite telephone system",
